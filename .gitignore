@@ -1,0 +1,44 @@
+# Build systems and IDEs
+/build/
+/build-*/
+/build_*/
+/**/build/
+/**/build-*/
+/**/build_*/
+/.vs/
+/.vscode/
+/.idea/
+/.kilo/
+/JUCE/
+CMakeUserPresets.json
+*.vcxproj.user
+*.suo
+
+# Generated packages and local validation
+/dist/
+/package/
+/release_candidate/
+/installer/output/
+/installer/staging/
+/qa/
+/proof/
+/reports/
+/.audioqa/
+*.log
+*.tmp
+*.temp
+*.wav
+*.flac
+*.mp3
+*.zip
+*.7z
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Operating systems
+.DS_Store
+Thumbs.db
+Desktop.ini
