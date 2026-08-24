@@ -1,0 +1,44 @@
+name: Windows release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Standalone and VST3
+        shell: pwsh
+        run: .\_build_all.ps1 -Configuration Release -BuildDir build -BootstrapJuce
+      - name: Create release package
+        id: package
+        shell: pwsh
+        run: |
+          $version = '${{ github.ref_name }}'.TrimStart('v')
+          $artifactRoot = Get-ChildItem -LiteralPath build -Directory -Filter '*_artefacts' | Select-Object -First 1
+          if (-not $artifactRoot) { throw 'Build artefacts were not found.' }
+          New-Item -ItemType Directory -Path package | Out-Null
+          Copy-Item -Path (Join-Path $artifactRoot.FullName 'Release\Standalone\*.exe') -Destination package
+          Copy-Item -Path (Join-Path $artifactRoot.FullName 'Release\VST3\*.vst3') -Destination package -Recurse
+          $zip = "${{ github.event.repository.name }}_${version}_Windows_x64.zip"
+          Compress-Archive -Path package\* -DestinationPath $zip
+          "zip=$zip" >> $env:GITHUB_OUTPUT
+      - name: Publish GitHub release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $tag = '${{ github.ref_name }}'
+          $zip = '${{ steps.package.outputs.zip }}'
+          gh release view $tag 2>$null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload $tag $zip --clobber
+          } else {
+            gh release create $tag $zip --generate-notes --title $tag
+          }
