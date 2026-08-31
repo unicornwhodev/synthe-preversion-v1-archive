@@ -1,3 +1,32 @@
+<!-- UWDEVST-SHOWCASE:START -->
+<p align="center">
+  <img src="docs/social-preview.jpg" width="960" alt="UWdeVST Orchestra — UWdeVST collection artwork" />
+</p>
+
+<h1 align="center">UWdeVST Orchestra</h1>
+
+<p align="center"><strong>Think bigger.</strong><br />A synthetic orchestral palette for sketching arrangements and exploring hybrid compositions.</p>
+
+<p align="center">
+  <a href="https://unicorsoundengine.com/en/plugins/synthe-orch#listen">Listen</a> ·
+  <a href="https://unicorsoundengine.com/en/plugins/synthe-orch#install">Download</a> ·
+  <a href="https://unicorsoundengine.com/en">Full collection</a> ·
+  <a href="https://github.com/unicornwhodev/synthe-orch/issues/new/choose">Report an issue</a>
+</p>
+
+**Windows x64 · VST3 · Standalone**
+
+- 20 orchestral instruments
+- Strings, woodwinds, brass and percussion
+- Algorithmic sound generation
+
+> **Publicly viewable source — proprietary license.** Official binaries are free for individuals and organizations with no more than EUR 100,000 in worldwide consolidated gross revenue. Modification and redistribution are not permitted. Professional use above that threshold requires a paid written license. [Read the license](https://unicorsoundengine.com/en/license) or [request a commercial license](https://unicorsoundengine.com/en/contact).
+
+The license included with each tagged release governs that release. The v1.0 license applies prospectively and does not withdraw permissions already granted on earlier releases.
+<!-- UWDEVST-SHOWCASE:END -->
+
+---
+
 # uwdevst_orch
 
 Free Windows x64 algorithmic orchestral synthesizer from the UWdeVST collection.
@@ -51,7 +80,7 @@ The public source tree contains only the product targets required for the Standa
 
 ## License
 
-The plugin is free to download and use. The source code is **source-available**, not open source. Local inspection, personal modification and personal builds are permitted under [LICENSE.md](LICENSE.md). Redistribution, repackaging and commercial reuse of the source require prior permission.
+Official binaries are free for qualifying users. The source code is publicly viewable under a proprietary license. Viewing and private compilation of strictly unchanged source are permitted; modification, redistribution, repackaging and reuse are not. See [LICENSE.md](LICENSE.md).
 
 JUCE is not included in this repository and remains subject to its own licence terms.
 
