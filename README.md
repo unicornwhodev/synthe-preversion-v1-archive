@@ -31,7 +31,9 @@ The macOS files are source/build packages; they are not compiled, signed or
 notarized macOS binaries.
 
 See [`ARCHIVE_MANIFEST.md`](ARCHIVE_MANIFEST.md) for immutable source and release
-provenance, and [`SHA256SUMS.txt`](SHA256SUMS.txt) for package checksums.
+provenance, [`SHA256SUMS.txt`](SHA256SUMS.txt) for package checksums, and
+[`MIGRATION_RECEIPT.md`](MIGRATION_RECEIPT.md) for the completed GitHub migration
+checks.
 
 ## Explicitly outside this archive
 
@@ -48,4 +50,3 @@ or archived:
 This consolidation does not change any product license. Every collection keeps
 the `LICENSE.md` file present at its imported `main` commit. The license included
 with a tagged release governs that release.
-
