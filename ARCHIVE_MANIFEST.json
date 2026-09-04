@@ -1,0 +1,68 @@
+{
+  "schema": "uwdevst-synthe-preversion-archive/v1",
+  "archiveDate": "2026-09-04",
+  "repository": "unicornwhodev/synthe-preversion-v1-archive",
+  "releaseTag": "preversion-v1-archive",
+  "sources": [
+    {
+      "collection": "Percussion",
+      "repository": "unicornwhodev/synth-perc",
+      "path": "collections/percussion",
+      "mainCommit": "24b4ffcf34e7894b5e1f8a17c7e7e40b29dc02f7",
+      "release": {
+        "tag": "v1.0.2",
+        "tagCommit": "743447f98144c92ebefaec226fa0a806ce3e6f82",
+        "archiveTag": "source/perc/v1.0.2",
+        "publishedAt": "2026-08-24T10:22:54Z"
+      }
+    },
+    {
+      "collection": "Rare",
+      "repository": "unicornwhodev/synthe-instr",
+      "path": "collections/rare",
+      "mainCommit": "6932f2798ecab4cab3cee44bc6098bbd3490a808",
+      "release": {
+        "tag": "v1.0.2",
+        "tagCommit": "a7affb47d4cfad4588edb3fabbe2d0ccb9d48803",
+        "archiveTag": "source/rare/v1.0.2",
+        "publishedAt": "2026-08-24T10:23:01Z"
+      }
+    },
+    {
+      "collection": "Orchestral",
+      "repository": "unicornwhodev/synthe-orch",
+      "path": "collections/orchestral",
+      "mainCommit": "3403c6d0952a36cb201cbf7276994b7ae20382c3",
+      "release": {
+        "tag": "v1.0.2",
+        "tagCommit": "7cd4b58794cce0f9a59225e87cec2a2a5ecd0831",
+        "archiveTag": "source/orch/v1.0.2",
+        "publishedAt": "2026-08-24T10:23:06Z"
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "repository": "unicornwhodev/synth-piano",
+      "mainCommit": "dc9e07ef4e6e3a4038f8954fe32cc3ed4bf5ef87",
+      "action": "none"
+    },
+    {
+      "repository": "unicornwhodev/synth-bass",
+      "mainCommit": "4e0fc4474b5d99960ef3c7a2e1cf419cbb9b2281",
+      "action": "none"
+    },
+    {
+      "repository": "unicornwhodev/synth-guitar",
+      "mainCommit": "6b17fb5f65a8c2c112c78bc104bed074297cf1a3",
+      "action": "none"
+    },
+    {
+      "repository": "unicornwhodev/synth_drum",
+      "mainCommit": "6d9e5cd986418d1e9581ae5d52b73792a7dbfd04",
+      "action": "none",
+      "reason": "active editing; explicitly outside migration scope"
+    }
+  ]
+}
+
